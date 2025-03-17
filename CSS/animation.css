@@ -1,101 +1,197 @@
 body{
-    
 }
 h2{
-    font-size: 40px;
-    color: blue;
+   font-size: 40px;
+   color: blue;
 }
 .button{
-    font-size: 20px;
-    background-color: rgba(0, 0, 255, 0.482) ;
-    border-radius: 40px;
-    padding: 10px;
-    border: 2px solid rgba(0, 0, 255, 0.482);
-    transition: all 0.5s ease;
+   font-size: 20px;
+   background-color: rgba(0, 0, 255, 0.482) ;
+   border-radius: 40px;
+   padding: 10px;
+   border: 2px solid rgba(0, 0, 255, 0.482);
+   transition: all 0.5s ease;
 }
 .button:hover{
-    background-color: rgba(0, 0, 255, 0);
-    letter-spacing: 2px;
+   background-color: rgba(0, 0, 255, 0);
+   letter-spacing: 2px;
 }
+.button-1{
+       position: relative;
+       display: block;
+       font-size: 20px;
+       background-color: green;
+       border-radius: 40px;
+       padding: 10px;
+       border: 2px solid rgba(0, 0, 255, 0.482);
+       margin: 10px;
+       transition: all 0.5s ease-in-out;
+       cursor: pointer;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       overflow: hidden;
+}
+
+/* .button-1:hover {
+       animation: gradientMove 0.8s infinite alternate;
+       
+         }
+@keyframes gradientMove {
+   0% { 
+       background: linear-gradient(to top right, green, darkgreen);}
+   50% { 
+       background: linear-gradient(to bottom left, darkgreen, green);}
+   100% { 
+       background: linear-gradient(to top right, green darkgreen);} */
+.button-1:after {
+   content: "";
+   position: absolute;
+   transform: skewY(48deg) scale(1);
+   top: 0;
+   left: 0%;
+   right: -8%;
+   transform-origin: bottom left;
+   /* transform-origin: top right; */
+   z-index: -1;
+   background-color: brown;
+   width: 100%;
+   height: 100%;
+   transition: 0.8s
+}
+.button-1:hover:after {
+   transform:rotateZ(0deg);
+}
+
 img{
-    width: 100%;
+   width: 100%;
 }
 .live{
-    width: 400px;
-    height: 600px;
-    border: 2px solid black;
-    margin: 50px auto;
+   width: 400px;
+   height: 600px;
+   border: 2px solid black;
+   margin: 50px auto;
 }
 .hover-1{
-    position: relative;
+   position: relative;
 }
 .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    background-color: rgba(128, 128, 128, 0.47);
-    opacity: 0;
-    transform: scale(0.4);
-    transition: all 0.5s ease;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 400px;
+   background-color: rgba(128, 128, 128, 0.47);
+   opacity: 0;
+   transform: scale(0.4);
+   transition: all 0.5s ease;
 }
-    
+   
 .hover-1 img{
-       height: 400px;
-       object-fit: cover;
+      height: 400px;
+      object-fit: cover;
 }
 .hover-1 h3{
-    position: absolute;
-    top: 45%;
-    left: 30%;
-    color: rgba(4, 4, 25, 0.747);
-    padding: 5px;
-    font-size: 30px;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s ease;
+   position: absolute;
+   top: 45%;
+   left: 30%;
+   color: rgba(4, 4, 25, 0.747);
+   padding: 5px;
+   font-size: 30px;
+   text-align: center;
+   opacity: 0;
+   transition: all 0.5s ease;
 }
 
+   
 .text{
-    padding: 0px 10px;
+   padding: 0px 10px;
 }
 .hover-1:hover .overlay{
-    opacity: 1;
-    transform: scale(1);
-    
+   opacity: 1;
+   transform: scale(1);
+   
 }
 .hover-1:hover h3{
-    opacity: 1;
-    transform: scale(1);
-    top: 40%;
+   opacity: 1;
+   transform: scale(1);
+   top: 40%;
 }
 .pic-2{
-    margin: 50px auto;
-    width: 16%;
-    position: relative;
-
+   margin: 50px auto;
+   width: 23%;
+   position: relative;
 }
 .pic-2 img{
-    width: 400px;
-    height: 500px;
-   
-
-}
+   width: 400px;
+   height: 500px;
+  }
 .overlay-2{
-    font-size: 40px;
-    position: absolute;
-    color: white;
-    transition: all 0.5s ease;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    opacity: 0;
+   font-size: 40px;
+   position: absolute;
+   color: white;
+   transition: all 0.5s ease;
+   top: 50%;
+   left: 50%;
+   z-index: 10;
+   opacity: 0;
 
 
 }
 .pic-2:hover .overlay-2 {
-    opacity: 1;
-    transform: scale(1);
-    top: 40%;
+   opacity: 1;
+   transform: scale(1);
+   top: 40%;
+}
+.unique{
+   position: relative;
+   margin: 0 auto;
+   width: 24%;
+}
+.box{
+   width: 400px;
+   height: 300px;
+   border: 2px solid black;
+   position: absolute;
+   transition: all 0.5s ease;
+}
+.box img{
+      width: 80px;
+      height: 100px;
+      object-fit: cover;
+      margin: -35px 162px;
+      border-radius: 30-px;
+}
+.box p{
+
+padding: 41px 15px;
+}
+.unique:hover .box{
+   
+   transform: rotateY(40deg);
+
+}
+.waving{
+    font-size: 64px;
+    padding: 45px;
+    animation: hieffect 1s infinite ease-in-out;
+    /* rotate: 20deg; */
+    display: inline-block;
+    transform-origin: bottom right;
+}
+@keyframes hieffect {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(20deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-20deg);}
+    100% {transform: rotate(0deg);}
+}
+.child{
+    width: 200px;
+    height: 300px;
+    transition: transform 0.5s ease-in-out;
+    padding: 50px;
+}
+.child:hover{
+    transform: scale(1.2);
 }
